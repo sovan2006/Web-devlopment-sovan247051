@@ -1,0 +1,53 @@
+.parant{
+    height: 100vh;
+    background-color: yellow;
+
+}
+.box1{
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 10px;
+      left: px;}
+      
+      
+      .box1:hover{
+        transform: rotate(90deg);
+        background-color: white;
+    }
+    .circle{
+        border-radius: 50%;
+        background-color: aqua;
+        height: 200px;
+        width: 200px;
+        position: sticky;
+        top: 10px;
+
+    }
+
+
+.box2{
+    width: 200px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    bottom: -10px;
+    left: px;
+}
+.box3{
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.box4{
+    width: 200px;
+    height: 100px;
+    background-color: rgb(162, 18, 167);
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}

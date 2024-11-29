@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parant{
+            height: 100vh;
+            
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .childOne{
+            height: 200px;
+        width: 200px;
+        background-color: yellow;
+        }
+        .childOne:hover
+        {
+            background-color: blue;
+            color: aqua;
+            transform: scale(1.4);
+            transition: 3s;}
+        .childTwo{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+        .childTwo:hover{
+            background-color: pink;
+            transform: scale(1.4);
+            transition: 3s ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div class="parant">
+        <div class="childOne">
+
+        </div>
+        <div class="childTwo">
+    
+        </div>
+
+    </div>
+   
+</body>
+</html>
