@@ -1,0 +1,103 @@
+ 
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+        h1{ 
+            text-align: center;
+            text-decoration: dotted;
+           color: red;
+           background-color: aqua ;
+        }
+        form {
+            width: 50%;
+            height: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+            width: 100%;
+            height: 40px;
+            color: black;
+            font-weight: bolder;
+            background-color: rgb(0, 89, 255);
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is from Validation</h1>
+    <form action="" id="validation-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email</label> <br>
+        <input type="text" name="email" id="email"> <br>
+        <span id="email-error" class="error"></span>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+    const submitForm = (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        const confirmPassword = document.getElementById('confirm-password').value.trim();
+        console.log("Checking the form");
+
+        if (!name || !email || !password || !confirmPassword) {
+            window.alert("Please fill all input fields");
+            return;
+        }
+        let isValid = true;
+        if (!email.includes('@')) {
+            document.getElementById('email-error').innerText = 'Invalid email';
+            isValid = false;
+        } else {
+            document.getElementById('email-error').innerText = '';
+        }
+
+        if (password !== confirmPassword) {
+            window.alert("Passwords do not match");
+            return;
+        }
+
+        if(isValid) {
+            window.alert("Form is submitted successfully");
+        }
+    }
+
+    document.getElementById('validation-form').addEventListener('submit', submitForm);
+    </script>
+ 
+</body>
+</html>
+```
+ 
