@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow:2px 2px 2px black ;
+            position: relative;
+            display: flex;
+
+            
+        }
+        .section{
+            position: relative;
+            display: flex;
+            justify-content: center;
+             align-items: center;
+             height: 100vh;
+
+        
+
+        }
+        h1{
+            font-size: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Traffic Light</h1>
+    <div class="section">
+         <div id="circle" draggable="true" >
+
+         </div>
+    </div>
+    <script>
+        const Light = () => {
+    let light = document.getElementById('circle');
+
+    light.addEventListener("click", () => {
+        light.style.boxShadow = "10px 10px 100px 10px green";
+        light.style.backgroundColor = "green";
+    });
+
+    light.addEventListener("dblclick", () => {
+        light.style.boxShadow = "10px 10px 100px 10px yellow";
+        light.style.backgroundColor = "yellow";
+    });
+
+    light.addEventListener("dragstart", () => {
+        light.style.boxShadow = "10px 10px 100px 10px red";
+        light.style.backgroundColor = "red";
+    });
+};
+
+Light();
+
+    </script>
+    
+</body>
+</html>
